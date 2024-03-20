@@ -1,24 +1,24 @@
 <nav class="navbar">
-  <div class="container">
-    <div class="row">
-      <h1 class="logo">
-        <%= link_to "Gobbah Welding", "#headerbg", spy: true, smooth: true, duration: 1000, style: "cursor: pointer;" %>
-      </h1>
-      <ul class="bar">
-        <li>
-          <%= link_to "Home", "#headerbg", onclick: "openBar()", active_class: "active", spy: true, smooth: true, duration: 1000 %>
-        </li>
-        <li>
-          <%= link_to "Services", "#services", onclick: "openBar()", active_class: "active", spy: true, smooth: true, duration: 1000 %>
-        </li>
-        <li>
-          <%= link_to "Contact", "#contact", onclick: "openBar()", active_class: "active", spy: true, smooth: true, duration: 1000 %>
-        </li>
-      </ul>
-      <div class="button" onclick="openBar()">
-        <div class="burger"></div>
-        <div class="burger"></div>
-        <div class="burger"></div>
+  <div class="navbar-container">
+    <div class="navbar-content">
+      <div class="left-content">
+        <h1 class="logo">
+          <%= image_tag("logo.png", alt: "logo", class: "logo") %>
+          <%= link_to "Gobbah Welding", "#home", spy: true, smooth: true, duration: 1000, style: "cursor: pointer;" %>
+        </h1>
+      </div>
+      <div class="right-content">
+        <ul class="bar">
+          <li>
+            <%= link_to "Home", "#home", onclick: "openBar()", active_class: "active", spy: true, smooth: true, duration: 1000 %>
+          </li>
+          <li>
+            <%= link_to "Services", "#services", onclick: "openBar()", active_class: "active", spy: true, smooth: true, duration: 1000 %>
+          </li>
+          <li>
+            <%= link_to "Contact", "#contact", onclick: "openBar()", active_class: "active", spy: true, smooth: true, duration: 1000 %>
+          </li>
+        </ul>
       </div>
     </div>
   </div>

@@ -1,0 +1,59 @@
+.navbar {
+  background-color: #333; /* Navbar background color */
+  color: white; /* Text color */
+  padding: 10px 0; /* Adjust padding as needed */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between; /* Logo on left, links on right */
+  align-items: center;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+}
+
+.left-content {
+  display: flex;
+  align-items: center;
+}
+
+.right-content {
+  margin-left: 55em;
+}
+
+.logo {
+  margin: 0; /* Remove default margin */
+
+  img{
+    width: 40px;
+    margin-right: 10px;
+  }
+}
+
+.bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bar li {
+  display: inline-block;
+  margin-left: 20px; /* Adjust margin between links */
+}
+
+.bar li:first-child {
+  margin-left: 0; /* Remove margin for the first link */
+}
+
+.bar li a {
+  color: white; /* Link text color */
+  text-decoration: none; /* Remove default underline */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.bar li a:hover {
+  color: #ddd; /* Change link color on hover */
+}
