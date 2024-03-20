@@ -1,2 +1,59 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<header>
+  <%#= image_tag("banner.jpeg", alt: "Header", class: "banner") %>
+  <h1>Open Source Website</h1>
+  <div class="row">
+    <%= button_to "Hire me", "#", class: "btn", style: "cursor: pointer;" %>
+  </div>
+  <div class="headerbg"></div>
+</header>
+
+<section id="services">
+  <div class="container services">
+    <h2 class="main-title text-center">SERVICES</h2>
+  <div class="cards">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      Breakfast
+    </div>
+
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
+      Lunch
+    </div>
+
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
+      Dinner
+    </div>
+  </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="container contact">
+    <h2 class="main-title text-center">CONTACT</h2>
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-4 mb-1">
+          <input name="name" placeholder="Name" class="contact-input" />
+        </div>
+        <div class="col-md-4 mb-1">
+          <input name="email" placeholder="Email" class="contact-input" />
+        </div>
+        <div class="col-md-4 mb-1">
+          <input name="subject" placeholder="Subject" class="contact-input" />
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="col-md-12">
+      <textarea name="message" placeholder="Message" class="contact-textarea"></textarea>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-md-12">
+        <%= button_to "Send Message", "#", class: "form-btn", method: :post %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section></section>
