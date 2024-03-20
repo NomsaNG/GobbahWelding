@@ -4,7 +4,7 @@
     <p>Precision welding services for all your <br /> industrial needs</p>
     <h1>Expert <br /> Welding <br /> Solutions</h1>
     <div class="row">
-      <%= button_to "Get A Quote", "#", class: "btn", style: "cursor: pointer;" %>
+      <%= button_to "Get A Quote", "#contact", class: "btn", style: "cursor: pointer;" %>
     </div>
   </div>
 </header>
@@ -15,16 +15,40 @@
   <div class="container services">
     <h2 class="main-title text-center">SERVICES</h2>
   <div class="cards">
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      Breakfast
+    <div class="card-category">
+      <%= image_tag("crotched welding.jpeg", alt: "welder", class: "welder") %>
+      <div class="card-text">
+        <h1>Our Expertise <i class="fa-solid fa-certificate"></i> </h1>
+        <p>
+            Our team of certified welders have years of experience and can handle
+            any welding project, big or small. We are dedicated to providing high-
+            quality workmanship and exceptional customer service.
+        </p>
+      </div>
     </div>
 
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-      Lunch
+    <div class="card-category">
+      <div class="card-text">
+        <h1>Our Services <i class="fa-solid fa-gears"></i></h1>
+        <p>
+          We offer a wide range of welding services including MIG, TIG, and Stick
+          welding. We specialize in custom fabrication and can create anything from
+          ornamental ironwork to structural steel. We also offer mobile welding
+        </p>
+      </div>
+      <%= image_tag("welding.jpeg", alt: "welder", class: "welder") %>
     </div>
 
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-      Dinner
+    <div class="card-category" >
+      <%= image_tag("welding equipment.jpeg", alt: "welder", class: "welder") %>
+      <div class="card-text">
+        <h1>Our Equipment <i class="fa-solid fa-screwdriver-wrench"></i></h1>
+        <p>
+          We use state-of-the-art welding equipment to ensure precise and efficient
+          welding. Our equipment is regularly maintained to ensure maximum
+          performance and safety.
+        </p>
+      </div>
     </div>
   </div>
 
@@ -32,30 +56,5 @@
 </section>
 
 <section id="contact">
-  <div class="container contact">
-    <h2 class="main-title text-center">CONTACT</h2>
-    <div class="col-md-12">
-      <div class="row">
-        <div class="col-md-4 mb-1">
-          <input name="name" placeholder="Name" class="contact-input" />
-        </div>
-        <div class="col-md-4 mb-1">
-          <input name="email" placeholder="Email" class="contact-input" />
-        </div>
-        <div class="col-md-4 mb-1">
-          <input name="subject" placeholder="Subject" class="contact-input" />
-        </div>
-      </div>
-    </div>
-    <br />
-    <div class="col-md-12">
-      <textarea name="message" placeholder="Message" class="contact-textarea"></textarea>
-    </div>
-    <br />
-    <div class="row">
-      <div class="col-md-12">
-        <%= button_to "Send Message", "#", class: "form-btn", method: :post %>
-      </div>
-    </div>
-  </div>
+  <%= render "shared/form" %>
 </section>

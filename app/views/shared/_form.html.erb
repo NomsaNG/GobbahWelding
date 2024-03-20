@@ -1,0 +1,48 @@
+<div class="container contact">
+  <h2 class="main-title text-center">CONTACT</h2>
+  <div class="row">
+    <!-- Contact Form -->
+    <div class="col-md-6">
+      <%= form_with(url: create_contact_path, method: :post, local: true) do |form| %>
+        <div class="row">
+          <div class="col-md-6">
+            <%= form.text_field :first_name, placeholder: "First Name", class: "contact-input" %>
+          </div>
+          <div class="col-md-6">
+            <%= form.text_field :last_name, placeholder: "Last Name", class: "contact-input" %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <%= form.email_field :email, placeholder: "Email", class: "contact-input" %>
+          </div>
+          <div class="col-md-6">
+            <%= form.telephone_field :phone, placeholder: "Phone", class: "contact-input" %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <%= form.text_area :message, placeholder: "Message", class: "contact-textarea" %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <%= form.submit "Send Message", class: "form-btn" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <!-- Contact Information -->
+    <div class="col-md-6">
+      <div class="My-Contact-information">
+        <h3>My Contact Information</h3>
+        <p><i class="fa-solid fa-envelope"></i> Email: gobbahwelding@gmail.com</p>
+        <p>Call Us: +27 84 848 8881</p>
+        <p>We are open Monday to Friday</p>
+        <p>Follow Us</p>
+        <a href="https://www.instagram.com/gobbahwelding/"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</div>

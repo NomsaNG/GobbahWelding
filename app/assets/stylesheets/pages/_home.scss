@@ -51,7 +51,7 @@ body {
   color:white;
   font-weight: 500;
   z-index: 1;
-  background-color: #01bf71;
+  background-color: rgb(227, 197, 26);
   padding:  10px 50px;
   margin: 0 0.5rem;
   font-family: sans-serif;
@@ -62,16 +62,17 @@ body {
 
 header {
   position: relative; /* Make sure the header is positioned relatively */
+  height: 100vh; /* Set the height to 100% of the viewport height */
 }
 
 .banner {
   width: 100%;
-  height: auto; /* Ensure the image is responsive */
+  height: 100%;
 }
 
 .header-content {
   position: absolute; /* Position content absolutely within the header */
-  top: 30%; /* Position at the vertical center of the header */
+  top: 50%; /* Position at the vertical center of the header */
   transform: translateY(-50%); /* Adjust for vertical centering */
   padding-left: 7em;
   color: white;
@@ -86,23 +87,30 @@ header h1 {
 
 
 
-
+h2{
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-family: 'Orbitron';
+  color: rgb(227, 197, 26);
+  margin: 1em;
+}
 
 
 
 
 // contact
 
-.contact {
-  .main-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
+#contact {
+background-color: rgb(5, 5, 5);
+color: white;
 
   .contact-input,
   .contact-textarea {
     width: 100%;
     padding: 10px;
+    background-color: transparent;
+    color: white;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -123,20 +131,25 @@ header h1 {
   }
 
   .form-btn {
-    background-color: #007bff;
+    background-color: transparent;
+    border: 2px solid white;
     color: #fff;
-    border: none;
+    width: 100%;
+    margin-bottom: 2em;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: #0056b3;
+      background-color: rgb(227, 197, 26);
     }
   }
 }
 
+.My-Contact-information{
+  margin-left: 13em;
+}
 
 
 
@@ -144,50 +157,41 @@ header h1 {
 
 // cards
 
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-}
 
-.card-category{
-  height: 15em;
+.card-category {
+  height: 30em;
   border-radius: 10px;
-}
-// Smallest device
-@media (min-width: 100px) and (max-width: 575px) {
-  .cards {
-    grid-template-columns: 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+
+  img{
+    height: 100%;
   }
 }
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  .cards {
-    grid-template-columns: 1fr;
+
+.card-text{
+  color: black;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+  p{
+    font-family: sans-serif;
+  }
+  h1{
+    font-family: 'Orbitron';
+    color: rgb(227, 197, 26);
   }
 }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
-}
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
 
 
 
